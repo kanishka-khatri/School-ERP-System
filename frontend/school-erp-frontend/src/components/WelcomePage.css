@@ -1,0 +1,189 @@
+/* General Styles */
+.welcome-page-body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  transition: 0.3s ease;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  background-color: #333;
+  color: white;
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+.sidebar.close {
+  width: 80px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px;
+}
+
+.sidebar-logo {
+  font-size: 24px;
+  margin: 0;
+  margin-left: 10px;
+
+}
+
+.toggle-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sidebar-links {
+  list-style-type: none; 
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar-links li {
+  padding: 15px 0;
+  text-align: left;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.sidebar-links a .icon {
+  margin-right: 10px;
+}
+
+.sidebar-links a:hover {
+  background-color: #575757;
+}
+
+/*.sidebar-links .active a {
+  background-color: #4CAF50;
+}*/
+
+.sidebar.close .sidebar-links a {
+  justify-content: center;
+}
+
+.sidebar.close .sidebar-links a .icon {
+  margin-right: 0;
+}
+
+/* Main Content Area */
+.content {
+  margin-left: 250px;
+  padding: 0px;
+  /* width: calc(100% - 190px); */
+  width: 1250px;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+.sidebar.close ~ .content {
+  margin-left: 80px;
+  width: calc(100% - 224px);
+}
+
+.welcome-header {
+  background-color: #2C3E50;
+  color: white;
+  padding: 61px 20px;
+  margin-bottom: 30px;
+  text-align: center; 
+}
+
+.welcome-header h2 {
+  margin: 0;
+  font-size: 36px;
+  
+}
+
+/* Dashboard Blocks */
+.dashboard-blocks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.dashboard-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dashboard-block {
+  background-color: white;
+  width: 300px;
+  margin: 15px;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+  flex-grow: 1;
+  
+}
+
+.dashboard-block:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-block h3 {
+  color: #333;
+}
+
+.dashboard-block p {
+  color: #777;
+}
+
+/* Different Colors for Blocks */
+.admin-block {
+  background-color: #D8E5F7;
+}
+
+.teacher-block {
+  background-color: #ABD1D1;
+}
+
+.student-block {
+  background-color: #FFCBCB;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80px;
+  }
+
+  .content {
+    margin-left: 80px;
+   /* width: calc(100% - 224px);*/
+  }
+.dashboard-block{
+  flex-direction: column;
+  align-items: center;
+}
+  .welcome-header {
+    padding: 30px 10px;
+  }
+}

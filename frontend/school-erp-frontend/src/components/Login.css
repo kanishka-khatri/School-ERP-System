@@ -1,0 +1,72 @@
+/* General Styles for the body */
+.login-page-body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e0f7fa;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 94vh;
+  padding: -3%;
+}
+
+
+/* Login Page Styles */
+.login-page {
+  max-width: 472px; /* Increase max width for the login form */
+  width: 90%; /* Full width on small screens */
+  padding: 27px; /* Add more padding for a spacious feel */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #ffffff; /* Keep the form background white for contrast */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for better separation */
+  text-align: center; /* Center text inside the form */
+  min-height: 328px; /* Minimum height to ensure sufficient space */
+}
+
+.login-page h1 {
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+.form-group label {
+  display: block; /* Block-level labels */
+  margin-bottom: 5px; /* Space below labels */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border-color: black;
+}
+
+.error {
+  color: red; /* Red color for error messages */
+  margin-top: 10px; /* Space above error messages */
+}
+
+button {
+  padding: 10px 20px; /* Padding for buttons */
+  background-color: #4caf50; /* Green background color */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 480px) {
+  .login-page {
+    margin: 20px; /* Margin for small screens */
+  }
+}
